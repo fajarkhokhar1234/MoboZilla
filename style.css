@@ -62,3 +62,11 @@ p{
     display: none;
   }
  }
+@media (max-width: 320px) {
+  .contact-input{
+    width: 200px;
+  }
+  .my-text{
+    font-size: smaller;
+  }
+}
