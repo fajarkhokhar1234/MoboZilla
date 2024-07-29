@@ -57,7 +57,7 @@ p{
     }
     
   }
- @media (max-width: 882px) {
+ @media (width: 768px) {
   .card-3{
     display: none;
   }
