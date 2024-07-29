@@ -1,0 +1,64 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box ;
+}
+p{
+    text-align: justify;
+}
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgb(9, 212, 238);
+    transition: all ease 0.5s;
+}
+.spacer{
+    height: 56px;
+}
+.my-btn:hover{
+    background-color: rgb(9, 212, 238);
+    width: 35px; 
+}
+.footer-icons i {
+    margin-left: 10px;
+  }
+  .footer-text {
+    margin-bottom: 0;
+  }
+  @media (max-width: 576px) {
+    .form-container {
+      padding: 100px;
+    }
+    .form-control {
+      width: 100%;
+    }
+  }
+  @media (max-width: 576px) {
+    .hide-small{
+        display: none;
+    }
+    .top-header{
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
+    .logo-section{
+        display: none;
+    }
+    .nav-icon{
+        display: none;
+    }
+  }
+  @media (min-width: 768px) {
+    .nav-logo{
+        display: none;
+    }
+    .show-nav{
+        display: none;
+    }
+    
+  }
+ @media (max-width: 882px) {
+  .card-3{
+    display: none;
+  }
+ }

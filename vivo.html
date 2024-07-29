@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Vivo</title>
+</head>
+<body>
+
+    <!--Top Header -->
+    <div class="container-fluid bg-light p-3 d-flex">
+      <div class="row container m-auto row-cols-1 row-cols-md-2 ">
+      <div class="d-flex align-items-center top-header">
+        <h5 class="text-info">The Best Place of Mobiles</h5>
+        <i class="fa-solid fa-cart-shopping text-info mb-1 ms-2"></i>
+      </div>
+
+      <!-- Login Form -->
+      <div class="d-flex align-items-center justify-content-end">
+        <i class="fa-solid fa-right-to-bracket text-info hide-small"></i>
+        <button
+          type="button"
+          class="btn text-info text-decoration-none hide-small"
+          data-bs-toggle="modal"
+          data-bs-target="#login_modal">
+          LogIn
+        </button>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="login_modal"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                  Log In
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+              <!-- img -->
+              <div class="modal-body m-auto">
+                <img
+                  src="./Assets/businessman_863430.png"
+                  alt=""
+                  style="height: 200px"/>
+              </div>
+              <!-- inputs -->
+              <div class="p-4">
+                <form action="">
+                  <div class="row">
+                    <div class="mb-2">
+                      <label for="name" type="text" class="form-label fw-bold">Username:</label>
+                      <input
+                        type="text"
+                        class="form-control form-control-lg border-2 border-secondary"
+                        placeholder="Enter Username"/>
+                    </div>
+                    <div class="mb-2">
+                      <label
+                        for="Password"
+                        type="Password"
+                        class="form-label fw-bold">Password:</label>
+                      <input
+                        type="password"
+                        class="form-control form-control-lg border-2 border-secondary"
+                        placeholder="Enter Password"/>
+                    </div>
+                    <!-- Login btn -->
+                    <div class="mt-2 p-3  border-6">
+                      <button
+                        class="btn btn-info text-white w-100">
+                        Login
+                      </button>
+                      <div class="form-check mb-3">
+                        <input
+                          type="checkbox"
+                          class="form-check-input border-2 border-secondary"
+                          checked/>
+                        <label for="form-check" class="form-check-label"
+                          >Remember me</label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- close btn -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  data-bs-dismiss="modal">
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Registration Form -->
+        <i class="fa-solid fa-user text-info hide-small"></i><button
+          type="button"
+          class="btn text-info text-decoration-none hide-small"
+          data-bs-toggle="modal"
+          data-bs-target="#register_modal">
+          Register
+        </button>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="register_modal"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                  Registration
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+              <div class="p-4">
+                <form action="">
+                  <div class="row">
+                    <div class="mb-2">
+                      <label for="name" type="text" class="form-label fw-bold"
+                        >Username:</label>
+                      <input
+                        type="text"
+                        class="form-control form-control-lg border-2 border-secondary"
+                        placeholder="Enter Username"/>
+                    </div>
+                    <div class="mb-2">
+                      <label for="email" type="email" class="form-label fw-bold"
+                      >Email:</label>
+                      <input
+                        type="email"
+                        class="form-control form-control-lg border-2 border-secondary"
+                        placeholder="Enter Email"/>
+                    </div>
+                    <div class="mb-2">
+                      <label
+                        for="Password"
+                        type="Password"
+                        class="form-label fw-bold"
+                        >Password:</label>
+                      <input
+                        type="password"
+                        class="form-control form-control-lg border-2 border-secondary"
+                        placeholder="Enter Password"/>
+                    </div>
+                    <div class="mb-2">
+                      <label
+                        for="Password"
+                        type="Password"
+                        class="form-label fw-bold"
+                        >Repeat Password:</label>
+                      <input
+                        type="password"
+                        class="form-control form-control-lg border-2 border-secondary"
+                        placeholder="Enter Password"/>
+                    </div>
+                    <div class="form-check mx-3 mt-2"> 
+                      <input class="form-check-input border-2 border-secondary"  required  type="checkbox" value="" id="invalidCheck2" >
+                      <label class="form-check-label" for="invalidCheck2">
+                        Agree to terms and conditions
+                      </label>
+                  </div>
+                    <p></p>
+                    <!-- Register btn -->
+                    <div class="mt-1 p-3 border-6">
+                      <button
+                        class="btn btn-info text-white w-100">
+                        Register
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- close btn -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <!-- Logo Section -->
+    <div class="container d-flex flex-nowrap flex-md-row align-items-center justify-content-center">
+      <div class="me-md-3 mb-2 mb-md-0 logo-section">
+        <img src="./Assets/logo.png" alt="Logo" style="height: 120px;" class="img-fluid"/>
+      </div>
+      <div class="d-flex flex-nowrap align-items-center">
+        <input type="text" placeholder="Search" class="form-control w-100 w-md-auto logo-section" style="max-width: 500px;"/>
+        <button class="border py-2 border-info bg-light rounded-circle ms-2 logo-section" type="button">
+          <i class="fa-solid fa-magnifying-glass px-2 py-1 logo-section"></i>
+        </button>
+      </div>
+    </div>
+    
+    
+    
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md bg-info p-2 sticky-top">
+      <div class="container-fluid">
+        <img src="./Assets/logo.png" alt="Logo" style="height: 50px;" class="img-fluid nav-logo align-items-center mt-0"/>
+        <a href="#" class="navbar-brand">
+          <i class="fa-solid fa-2x fa-house-chimney text-white nav-icon"></i>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon text-black"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a href="" class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false">Vivo</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item d-flex g-3" href="#">Vivo v9 <span class="bg-danger text-white w-15 ms-2 p-1">new</span> </a></li>
+                <li><a class="dropdown-item d-flex g-3" href="#">Vivo v5 <span class="bg-danger text-white w-15 ms-2 p-1">new</span> </a></li>
+                <li><a class="dropdown-item d-flex g-3" href="#">Vivo x9 <span class="bg-danger text-white w-15 ms-2 p-1">new</span> </a></li>
+                <li><a href="vivo.html" class="dropdown-item d-flex g-3" href="#">Read More... </a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="" class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false">Apple</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item d-flex g-3" href="#">Iphone Xr <span class="bg-danger text-white w-15 ms-2 p-1">new</span> </a></li>
+                <li><a class="dropdown-item d-flex g-3" href="#">Iphone Xs <span class="bg-danger text-white w-15 ms-2 p-1">new</span> </a></li>
+                <li><a class="dropdown-item d-flex g-3" href="#">Iphone 11<span class="bg-danger text-white w-15 ms-2 p-1" >new</span> </a></li>
+                <li><a href="iphone.html" class="dropdown-item d-flex g-3" href="#">Read More... </a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="" class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false">Oppo</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item d-flex g-3" href="#">Oppo a3 <span class="bg-danger text-white w-15 ms-2 p-1">new</span> </a></li>
+                <li><a class="dropdown-item d-flex g-3" href="#">Oppo a5 <span class="bg-danger text-white w-15 ms-2 p-1">new</span> </a></li>
+                <li><a class="dropdown-item d-flex g-3" href="#">Oppo a1 <span class="bg-danger text-white w-15 ms-2 p-1">new</span> </a></li>
+                <li><a href="oppo.html" class="dropdown-item d-flex g-3" href="#">Read More... </a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="" class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false">Huawei</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item d-flex g-3" href="#">Huawei y7 <span class="bg-danger text-white w-15 ms-2 p-1">new</span> </a></li>
+                <li><a class="dropdown-item d-flex g-3" href="#">Huawei y9 <span class="bg-danger text-white w-15 ms-2 p-1">new</span> </a></li>
+                <li><a class="dropdown-item d-flex g-3" href="#">Huawei y5 <span class="bg-danger text-white w-15 ms-2 p-1">new</span> </a></li>
+                <li><a href="huawei.html" class="dropdown-item d-flex g-3" href="#">Read More... </a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="" class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false">Samsung</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item d-flex g-3" href="#">Galaexy j6 <span class="bg-danger text-white w-15 ms-2 p-1">new</span> </a></li>
+                <li><a class="dropdown-item d-flex g-3" href="#">Galaexy j9 <span class="bg-danger text-white w-15 ms-2 p-1">new</span> </a></li>
+                <li><a class="dropdown-item d-flex g-3" href="#">Galaexy j7 <span class="bg-danger text-white w-15 ms-2 p-1">new</span> </a></li>
+                <li><a href="samsung.html" class="dropdown-item d-flex g-3" href="#">Read More... </a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="" class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false">Microsoft</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item d-flex g-3" href="#">Lumia-430 <span class="bg-danger text-white w-15 ms-2 p-1">new</span> </a></li>
+                <li><a class="dropdown-item d-flex g-3" href="#">Lumia-535 <span class="bg-danger text-white w-15 ms-2 p-1">new</span> </a></li>
+                <li><a class="dropdown-item d-flex g-3" href="#">Lumia-540 <span class="bg-danger text-white w-15 ms-2 p-1">new</span> </a></li>
+                <li><a href="microsoft.html" class="dropdown-item d-flex g-3" href="#">Read More... </a></li>
+              </ul>
+            </li>
+            <li class="nav-item mt-2">
+              <a href="contact.html" role="button" class="text-decoration-none text-white">Contact</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="" class="nav-link  text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-right-to-bracket text-white show-nav"></i>
+              <button
+              type="button"
+              class="btn text-white text-decoration-none show-nav"
+              data-bs-toggle="modal"
+              data-bs-target="#login_modal">
+              LogIn
+              </button>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link  text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-user text-white show-nav"></i>
+                <button
+                type="button"
+                class="btn text-white text-decoration-none show-nav"
+                data-bs-toggle="modal"
+                data-bs-target="#register_modal">
+                Register
+                </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <div class="container bg-light text-center mt-4">
+        <h1 class="text-info fw-bolder fs-1">Vivo</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa velit culpa unde cum, totam quo consectetur explicabo magnam aliquid. Sint tempore libero blanditiis sed, consequatur excepturi dolorem ad reiciendis dolores enim ab quo repellat! Reiciendis eius, architecto cumque iste ipsam dolore mollitia harum illo at, culpa tempora dignissimos numquam ipsa! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa velit culpa unde cum, totam quo consectetur explicabo magnam aliquid. Sint tempore libero blanditiis sed, consequatur excepturi dolorem ad reiciendis dolores enim ab quo repellat! Reiciendis eius, architecto cumque iste ipsam dolore mollitia harum illo at, culpa tempora dignissimos numquam ipsa!</p>
+    </div>
+    <h1 class="text-info fw-bolder fs-1 text-center mt-5">Vivo <span class="fs-4">Mobiles</span></h1>
+    <div class="container m-auto text-center mt-5 bg-light row row-cols-1 row-cols-lg-3 g-3 row-cols-md-3">
+    <!-- Card-1 -->
+    <div class="col">
+        <div class="card h-100 border border-2 ">
+          <a href=""><img src="./Assets/Vivo Mobiles/vivo-v11i-.jpg" alt=""></a>
+          <div class="card-body">
+            <h3 class="card-title py-2">Vivo V11i</h3>
+            <h5 class="card-subtitle py-2">Rs, <span class="text-info">30,000</span></h5>
+            <p class="text-center px-1 mb-0 pt-2"><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star px-1"></i><i class="fa-solid fa-star px-1"></i></p>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#notificationModal"><i class="fa-solid fa-heart"></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1"><i class="fa-solid fa-arrow-right-arrow-left" ></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#eye_modal"><i class="fa-solid fa-eye"></i></button>
+            <div>
+              <button class="btn btn-info rounded text-white"data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fa-solid fa-cart-shopping text-white"></i> ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card-2 -->
+      <div class="col">
+        <div class="card h-100 border border-2 ">
+          <a href=""><img src="./Assets/Vivo Mobiles/vivo-v5-plus.jpg" alt=""></a>
+          <div class="card-body">
+            <h3 class="card-title py-2">Vivo v5-plus</h3>
+            <h5 class="card-subtitle py-2">Rs, <span class="text-info">35,000</span></h5>
+            <p class="text-center px-1 mb-0 pt-2"><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star px-1 text-info"></i><i class="fa-solid fa-star px-1 text-info"></i></p>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#notificationModal"><i class="fa-solid fa-heart"></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1"><i class="fa-solid fa-arrow-right-arrow-left" ></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#eye_modal"><i class="fa-solid fa-eye"></i></button>
+            <div>
+              <button class="btn btn-info rounded text-white"data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fa-solid fa-cart-shopping text-white"></i> ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- card-3 -->
+      <div class="col">
+        <div class="card h-100 border border-2 ">
+          <a href=""><img src="./Assets/Vivo Mobiles/vivo-x23.jpg" alt=""></a>
+          <div class="card-body">
+            <h3 class="card-title py-2">Vivo x23</h3>
+            <h5 class="card-subtitle py-2">Rs, <span class="text-info">30,000</span></h5>
+            <p class="text-center px-1 mb-0 pt-2"><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star px-1"></i><i class="fa-solid fa-star px-1"></i></p>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#notificationModal"><i class="fa-solid fa-heart"></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1"><i class="fa-solid fa-arrow-right-arrow-left" ></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#eye_modal"><i class="fa-solid fa-eye"></i></button>
+            <div>
+              <button class="btn btn-info rounded text-white"data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fa-solid fa-cart-shopping text-white"></i> ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Card-4 -->
+    <div class="col">
+        <div class="card h-100 border border-2 ">
+          <a href=""><img src="./Assets/Vivo Mobiles/vivo-v7-plus.jpg" alt=""></a>
+          <div class="card-body">
+            <h3 class="card-title py-2">Vivo v7-plus</h3>
+            <h5 class="card-subtitle py-2">Rs, <span class="text-info">30,000</span></h5>
+            <p class="text-center px-1 mb-0 pt-2"><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star px-1"></i><i class="fa-solid fa-star px-1"></i></p>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#notificationModal"><i class="fa-solid fa-heart"></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1"><i class="fa-solid fa-arrow-right-arrow-left" ></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#eye_modal"><i class="fa-solid fa-eye"></i></button>
+            <div>
+              <button class="btn btn-info rounded text-white"data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fa-solid fa-cart-shopping text-white"></i> ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card-5 -->
+      <div class="col">
+        <div class="card h-100 border border-2 ">
+          <a href=""><img src="./Assets/Vivo Mobiles/vivo-v9-.jpg" alt=""></a>
+          <div class="card-body">
+            <h3 class="card-title py-2">Vivo v9</h3>
+            <h5 class="card-subtitle py-2">Rs, <span class="text-info">35,000</span></h5>
+            <p class="text-center px-1 mb-0 pt-2"><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star px-1 text-info"></i><i class="fa-solid fa-star px-1 text-info"></i></p>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#notificationModal"><i class="fa-solid fa-heart"></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1"><i class="fa-solid fa-arrow-right-arrow-left" ></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#eye_modal"><i class="fa-solid fa-eye"></i></button>
+            <div>
+              <button class="btn btn-info rounded text-white"data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fa-solid fa-cart-shopping text-white"></i> ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- card-6 -->
+      <div class="col">
+        <div class="card h-100 border border-2 ">
+          <a href=""><img src="./Assets/Vivo Mobiles/vivo-x21.jpg" alt=""></a>
+          <div class="card-body">
+            <h3 class="card-title py-2">Vivo x21</h3>
+            <h5 class="card-subtitle py-2">Rs, <span class="text-info">30,000</span></h5>
+            <p class="text-center px-1 mb-0 pt-2"><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star px-1"></i><i class="fa-solid fa-star px-1"></i></p>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#notificationModal"><i class="fa-solid fa-heart"></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1"><i class="fa-solid fa-arrow-right-arrow-left" ></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#eye_modal"><i class="fa-solid fa-eye"></i></button>
+            <div>
+              <button class="btn btn-info rounded text-white"data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fa-solid fa-cart-shopping text-white"></i> ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Card-7 -->
+    <div class="col">
+        <div class="card h-100 border border-2 ">
+          <a href=""><img src="./Assets/Vivo Mobiles/vivo-x9-.jpg" alt=""></a>
+          <div class="card-body">
+            <h3 class="card-title py-2">Vivo x9</h3>
+            <h5 class="card-subtitle py-2">Rs, <span class="text-info">30,000</span></h5>
+            <p class="text-center px-1 mb-0 pt-2"><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star px-1"></i><i class="fa-solid fa-star px-1"></i></p>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#notificationModal"><i class="fa-solid fa-heart"></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1"><i class="fa-solid fa-arrow-right-arrow-left" ></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#eye_modal"><i class="fa-solid fa-eye"></i></button>
+            <div>
+              <button class="btn btn-info rounded text-white"data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fa-solid fa-cart-shopping text-white"></i> ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card-8 -->
+      <div class="col">
+        <div class="card h-100 border border-2 ">
+          <a href=""><img src="./Assets/Vivo Mobiles/vivo-y71-.jpg" alt=""></a>
+          <div class="card-body">
+            <h3 class="card-title py-2">Vivo y71</h3>
+            <h5 class="card-subtitle py-2">Rs, <span class="text-info">35,000</span></h5>
+            <p class="text-center px-1 mb-0 pt-2"><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star px-1 text-info"></i><i class="fa-solid fa-star px-1 text-info"></i></p>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#notificationModal"><i class="fa-solid fa-heart"></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1"><i class="fa-solid fa-arrow-right-arrow-left" ></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#eye_modal"><i class="fa-solid fa-eye"></i></button>
+            <div>
+              <button class="btn btn-info rounded text-white"data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fa-solid fa-cart-shopping text-white"></i> ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- card-9 -->
+      <div class="col">
+        <div class="card h-100 border border-2 ">
+          <a href=""><img src="./Assets/Vivo Mobiles/vivo-y81.jpg" alt=""></a>
+          <div class="card-body">
+            <h3 class="card-title py-2">Vivo y81</h3>
+            <h5 class="card-subtitle py-2">Rs, <span class="text-info">30,000</span></h5>
+            <p class="text-center px-1 mb-0 pt-2"><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star px-1"></i><i class="fa-solid fa-star px-1"></i></p>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#notificationModal"><i class="fa-solid fa-heart"></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1"><i class="fa-solid fa-arrow-right-arrow-left" ></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#eye_modal"><i class="fa-solid fa-eye"></i></button>
+            <div>
+              <button class="btn btn-info rounded text-white"data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fa-solid fa-cart-shopping text-white"></i> ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Card-10 -->
+    <div class="col">
+        <div class="card h-100 border border-2 ">
+          <a href=""><img src="./Assets/Vivo Mobiles/vivo-y83-new.jpg" alt=""></a>
+          <div class="card-body">
+            <h3 class="card-title py-2">Vivo y83</h3>
+            <h5 class="card-subtitle py-2">Rs, <span class="text-info">30,000</span></h5>
+            <p class="text-center px-1 mb-0 pt-2"><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star px-1"></i><i class="fa-solid fa-star px-1"></i></p>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#notificationModal"><i class="fa-solid fa-heart"></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1"><i class="fa-solid fa-arrow-right-arrow-left" ></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#eye_modal"><i class="fa-solid fa-eye"></i></button>
+            <div>
+              <button class="btn btn-info rounded text-white"data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fa-solid fa-cart-shopping text-white"></i> ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card-11 -->
+      <div class="col">
+        <div class="card h-100 border border-2 ">
+          <a href=""><img src="./Assets/Vivo Mobiles/vivo-y83-pro.jpg" alt=""></a>
+          <div class="card-body">
+            <h3 class="card-title py-2">Vivo y83-pro</h3>
+            <h5 class="card-subtitle py-2">Rs, <span class="text-info">35,000</span></h5>
+            <p class="text-center px-1 mb-0 pt-2"><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star px-1 text-info"></i><i class="fa-solid fa-star px-1 text-info"></i></p>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#notificationModal"><i class="fa-solid fa-heart"></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1"><i class="fa-solid fa-arrow-right-arrow-left" ></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#eye_modal"><i class="fa-solid fa-eye"></i></button>
+            <div>
+              <button class="btn btn-info rounded text-white"data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fa-solid fa-cart-shopping text-white"></i> ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- card-12 -->
+      <div class="col">
+        <div class="card h-100 border border-2 ">
+          <a href=""><img src="./Assets/Vivo Mobiles/vivo-y97.jpg" alt=""></a>
+          <div class="card-body">
+            <h3 class="card-title py-2">Vivo y97</h3>
+            <h5 class="card-subtitle py-2">Rs, <span class="text-info">30,000</span></h5>
+            <p class="text-center px-1 mb-0 pt-2"><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star text-info px-1"></i><i class="fa-solid fa-star px-1"></i><i class="fa-solid fa-star px-1"></i></p>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#notificationModal"><i class="fa-solid fa-heart"></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1"><i class="fa-solid fa-arrow-right-arrow-left" ></i></button>
+            <button class="btn my-btn text-center border rounded-circle fw-bold px-1" data-bs-toggle="modal" data-bs-target="#eye_modal"><i class="fa-solid fa-eye"></i></button>
+            <div>
+              <button class="btn btn-info rounded text-white"data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fa-solid fa-cart-shopping text-white"></i> ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Brands Slider -->
+   <div class="text-center">
+    <h1 class="text-center fw-bolder mt-5 text-info">Our Dealing Brands</h1>
+    <div id="carouselExample" class="carousel slide container bg-light border border-1 shadow-lg p-4" data-bs-ride="carousel" data-bs-interval="2000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./Assets/Brand Logos/Apple.png" class=" text-center" alt="Image 1">
+        </div>
+        <div class="carousel-item">
+          <img src="./Assets/Brand Logos/Huawei.png" class=" text-center" alt="Image 2">
+        </div>
+        <div class="carousel-item">
+          <img src="./Assets/Brand Logos/Microsoft.png" class=" text-center" alt="Image 3">
+        </div>
+        <div class="carousel-item">
+          <img src="./Assets/Brand Logos/Oppo.png" class=" text-center" alt="Image 4">
+        </div>
+        <div class="carousel-item">
+          <img src="./Assets/Brand Logos/Samsung.png" class=" text-center" alt="Image 4">
+        </div>
+        <div class="carousel-item">
+          <img src="./Assets/Brand Logos/Vivo.png" class=" text-center" alt="Image 4">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+   </div>
+
+   <!-- Footer -->
+   <div class="container-fluid bg-light justify-content-center row row-cols-1 mt-5 p-5 row-cols-md-4">
+    <div class="col h-100">
+        <div class="card-subtitle d-flex flex-column">
+          <h3 class="fw-bold">Brands</h3>  
+          <a href="" class="text-decoration-none py-2 text-black">Vivo</a>
+          <a href="" class="text-decoration-none py-2 text-black">Microsft</a>
+          <a href="" class="text-decoration-none py-2 text-black">Apple</a>
+          <a href="" class="text-decoration-none py-2 text-black">Huawei</a>
+          <a href="" class="text-decoration-none py-2 text-black">Oppo</a>
+          <a href="" class="text-decoration-none py-2 text-black">Samsung</a>
+        </div>
+    </div>
+    <div class="col h-100">
+        <div class="card-subtitle d-flex flex-column">
+          <h3 class="fw-bold">Quick Links</h3>  
+          <a href="" class="text-decoration-none py-2 text-black">About Us</a>
+          <a href="contact.html" class="text-decoration-none py-2 text-black">Contact Us</a>
+          <a href="" class="text-decoration-none py-2 text-black">Help</a>
+          <a href="" class="text-decoration-none py-2 text-black">FAQs</a>
+          <a href="" class="text-decoration-none py-2 text-black">Terms of use </a>
+          <a href="" class="text-decoration-none py-2 text-black">Privacy Policy</a>
+        </div>
+    </div>
+    <div class="col h-100">
+        <div class="card-subtitle d-flex flex-column">
+          <h3 class="fw-bold">Get in Touch</h3>  
+          <a href="" class="text-decoration-none py-2 text-black"><i class="fa-solid fa-location-dot text-info"></i> Liberty Plaza, Lahore</a>
+          <a href="contact.html" class="text-decoration-none py-2 text-black"><i class="fa-solid fa-phone text-info"></i> +923003341566</a>
+          <a href="" class="text-decoration-none py-2 text-black d-md-flex align-items-center"><i class="fa-solid fa-envelope-open text-info"></i>@mobozilla.com</a>
+        </div>
+    </div>
+    <div class="col h-100">
+        <div class="card-subtitle d-flex flex-column">
+          <h3 class="fw-bold">News Letter</h3>  
+          <p>Free delivery on your first order!</p>
+          <div class="d-flex">
+            <input
+                    type="email"
+                    class="form-control form-control-md border-2 border-secondary"
+                    style="width: 150px;"
+                    placeholder="email"/>
+            <button class="btn btn-info text-white">Go</button>
+          </div>
+          <div class="mt-3">
+            <h5 class="fw-bold">Follow us on</h5>
+            <div>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram text-black"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-regular fa-envelope"></i>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="container-fluid bg-info d-flex flex-column flex-sm-row flex-md-row align-items-center justify-content-between p-3">
+    <h5 class="text-white footer-text">@2019 moboZilla, All Rights Reserved</h5>
+    <div class="footer-icons">
+      <i class="fa-brands fa-2x fa-cc-paypal text-white"></i>
+      <i class="fa-brands fa-2x fa-cc-mastercard text-white"></i>
+      <i class="fa-brands fa-2x fa-cc-visa text-white"></i>
+      <i class="fa-brands fa-2x fa-cc-discover text-white"></i>
+    </div>
+  </div>
+
+
+    <!-- All Modals -->
+  <!-- Notification Modal -->
+  <div class="modal fade" id="notificationModal" tabindex="-1" aria-labelledby="notificationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="notificationModalLabel">This page says</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          This item has been added to Wishlist.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Eye Button Modal -->
+  <div
+  class="modal fade"
+  id="eye_modal"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <h1 class="text-center">Vivo V11i</h1>
+      <h6 class="text-center px-2">Rs.35,000    <span class="text-decoration-line-through">Rs.37000</span></65>
+      <!-- img -->
+      <div class="modal-body m-auto">
+        <img
+          src="./Assets/Vivo Mobiles/vivo-v11i-.jpg"
+          alt=""
+          style="height: 200px"/>
+      </div>
+        <p class="text-info px-2"><i class="fa-solid fa-arrow-rotate-left"></i> 7 Days Return</p>
+        <p class="text-info px-2"><i class="fa-solid fa-money-bill"></i> Cash on Delivery</p>
+        <p class="text-info px-2"><i class="fa-solid fa-check"></i> 100% Genuine Product</p>
+        <hr class="text-info">
+        <div>
+          <p class="fw-bold"><i class="fa-regular fa-1x fa-hand-point-right text-info"></i> 1 YearManufacturer Warranty </p>
+          <p><i class="fa-duotone fa-solid fa-circle-dot fa-1x"></i> 6 GB RAm | 64GB ROM | Expandable Upto 256 GB</p>
+          <p><i class="fa-duotone fa-solid fa-circle-dot fa-1x"></i> 6.3 inch Full HD Display</p>
+          <p><i class="fa-duotone fa-solid fa-circle-dot fa-1x"></i> 16MP Rear Camera | 2MP Front Camera</p>
+          <p><i class="fa-duotone fa-solid fa-circle-dot fa-1x"></i> 3500mAh Battery</p>
+          <p><i class="fa-duotone fa-solid fa-circle-dot fa-1x"></i> Octa-core(4x2.0 GHz Cortex-A73 & 4x2.0 GHz Cortex-A53)</p>
+        </div>
+        <!-- Cart btn -->
+       <div class="mb-2 m-auto">
+          <button class="btn btn-info rounded text-white col-md-12"data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fa-solid fa-cart-shopping text-white"></i> ADD TO CART</button>
+        </div>
+      </div>
+      </div>
+    </div>
+    
+
+    <!-- Add to cart modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="notificationModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="notificationModalLabel">This page says</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            This item has been added to Cart.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</html>
